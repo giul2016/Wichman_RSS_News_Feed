@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
 
                 // String List_items = ((TextView) view).getText().toString();
 
-                String url = "";
+                String url;
                 /// selected item
                 switch (position) {
                     case 0:
