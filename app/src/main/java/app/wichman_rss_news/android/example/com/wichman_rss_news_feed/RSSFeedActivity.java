@@ -44,7 +44,7 @@ public class RSSFeedActivity extends Activity {
         };
 
         webview.setWebViewClient(client);
-//        setContentView(webview);
+        //setContentView(webview);
 
     }
 
