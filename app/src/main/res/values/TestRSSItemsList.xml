@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="test_rss_feeds_items">
+        <item>Test 1 Reuters Main News</item>
+        <item>Test 2 Reuters Sports News</item>
+        <item>Test 3 NPR Main News</item>
+        <item>Test 4 NPR Sports News</item>
+    </string-array>
+</resources>

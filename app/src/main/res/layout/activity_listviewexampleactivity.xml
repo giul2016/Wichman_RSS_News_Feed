@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@mipmap/ic_launcher" />
+
+    <ListView
+        android:id="@+id/myRSSlistview"
+        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        style="@style/Base.TextAppearance.AppCompat.Display1"
+        android:clickable="true"
+        android:entries="@style/Base.TextAppearance.AppCompat.Headline"
+        android:minWidth="@dimen/abc_text_size_headline_material"
+        android:paddingTop="@dimen/abc_action_bar_stacked_max_height"
+        android:textAlignment="center"
+        android:padding="@dimen/abc_text_size_headline_material">
+
+    </ListView>
+
+</LinearLayout>
