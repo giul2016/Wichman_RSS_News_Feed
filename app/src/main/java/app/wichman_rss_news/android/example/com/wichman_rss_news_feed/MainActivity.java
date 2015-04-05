@@ -61,6 +61,9 @@ public class MainActivity extends Activity {
                     case 4:
                         url = "http://www.msn.com/en-us/weather";
                         break;
+                    case 5:
+                        url = "http://www.reuters.com/tools/rss";
+                        break;
                     default:
                         url = "http://www.google.com";
                         break;
