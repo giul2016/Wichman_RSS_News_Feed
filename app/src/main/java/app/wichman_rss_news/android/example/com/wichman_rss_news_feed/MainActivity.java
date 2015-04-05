@@ -10,7 +10,6 @@ import android.widget.ListView;
 
 public class MainActivity extends Activity {
 
-
     /**
      * Called when the activity is first created.
      */
@@ -24,7 +23,6 @@ public class MainActivity extends Activity {
         ListView mainListView = (ListView) findViewById(R.id.myMainListView);
 
         // Create and populate a List of RSS List items.
-
         String[] rss_feeds_items = getResources().getStringArray(R.array.rss_feeds_items);
 
         // Create ArrayAdapter using the RSS Feeds Items list.
@@ -34,17 +32,14 @@ public class MainActivity extends Activity {
         mainListView.setAdapter(listAdapter);
 
         /// listening to single list item on click
-
-        // mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
-                // String List_items = ((TextView) view).getText().toString();
 
                 String url;
-                /// selected item
+
                 switch (position) {
                     case 0:
                         url = "http://feeds.reuters.com/reuters/topNews";
@@ -69,14 +64,10 @@ public class MainActivity extends Activity {
                         break;
                 }
 
-                /// Launching new Activity on selecting single List Item
-
                  Intent i = new Intent(getApplicationContext(), RSSFeedActivity.class);
-                /// sending data to new activity
-//                 i.putExtra("url", url);
+
                 try {
-                   // Intent i = new Intent(getApplicationContext(), RSSFeedActivity.class);
-                    i.putExtra("url", url);
+                   i.putExtra("url", url);
                     startActivity(i);
                 } catch (Exception e) {
                     e.printStackTrace();

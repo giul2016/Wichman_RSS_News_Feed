@@ -19,14 +19,10 @@ public class RSSFeedActivity extends Activity {
 
         wvCount = 0;
 
-          Intent i = getIntent();
-          Bundle b = i.getExtras();
-          String strUrl = (String) b.get("url");
-
-
-        Uri uri = Uri.parse(strUrl);
-//        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-//        startActivity(intent);
+         Intent i = getIntent();
+         Bundle b = i.getExtras();
+         String strUrl = (String) b.get("url");
+         Uri uri = Uri.parse(strUrl);
 
         webview = (WebView) findViewById(R.id.rss_web_view);
         webview.getSettings().setJavaScriptEnabled(true);
@@ -47,6 +43,8 @@ public class RSSFeedActivity extends Activity {
 
     }
 
+     //This onBackPressed() method allows the user to go back to previous page
+     //instead of just back to  the app's main menu when using the back button
     @Override
     public void onBackPressed() {
         if (wvCount == 0) {
