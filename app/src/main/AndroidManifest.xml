@@ -19,9 +19,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RSSFeedActivity"
-                  android:label="RSSFeedHeadlines">
+        <activity
+            android:name=".RSSFeedActivity"
+            android:label="RSSFeedHeadlines" >
+        </activity>
 
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="app.wichman_rss_news.android.example.com.wichman_rss_news_feed.MyContentProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:multiprocess="true" >
+        </provider>
+
+        <activity
+            android:name=".ContactsActivity"
+            android:label="@string/title_activity_contacts" >
+        </activity>
+        <activity
+            android:name=".AddContactActivity"
+            android:label="@string/title_activity_add_contact" >
         </activity>
     </application>
 

@@ -59,20 +59,37 @@ public class MainActivity extends Activity {
                     case 5:
                         url = "http://www.reuters.com/tools/rss";
                         break;
+                    case 6:
+                        url = "";
+                        break;
                     default:
                         url = "http://www.google.com";
                         break;
                 }
 
-                 Intent i = new Intent(getApplicationContext(), RSSFeedActivity.class);
+                if (url != "") {
 
-                try {
-                   i.putExtra("url", url);
-                    startActivity(i);
-                } catch (Exception e) {
-                    e.printStackTrace();
+                    Intent i = new Intent(getApplicationContext(), RSSFeedActivity.class);
+
+                    try {
+                        i.putExtra("url", url);
+                        startActivity(i);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
 
+                else {
+
+                    Intent i = new Intent(getApplicationContext(), ContactsActivity.class);
+                    try {
+
+                        startActivity(i);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                }
             }
         });
     }
