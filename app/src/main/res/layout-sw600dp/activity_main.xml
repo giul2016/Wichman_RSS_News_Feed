@@ -1,3 +1,7 @@
+<!--
+   This is the xml file with the larger rss icon for tablets
+
+   -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -53,6 +57,7 @@
         android:id="@+id/webView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"/>
+
 
 
 
