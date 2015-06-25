@@ -1,9 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="14dp" >
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+<RelativeLayout
+    android:id="@+id/container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
 
     <Button
         android:layout_width="match_parent"
@@ -15,18 +38,7 @@
         android:layout_alignParentStart="true"
         android:onClick="showContacts"/>
 
-    <TextView
-        android:layout_width="match_parent"
 
-        android:layout_height="wrap_content"
-        android:text="Contacts"
-        android:id="@+id/contactsTextView"
-        android:ems="20"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/addPhoneEditText"/>
 
     <EditText
         android:layout_width="150dp"
@@ -114,4 +126,36 @@
         android:layout_marginStart="30dp"
         android:onClick="addContact"/>
 
-</RelativeLayout>
+           <!-- <TextView
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:text="Contacts"
+                android:id="@+id/contactsTextView"
+                android:ems="20"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/addPhoneEditText"/>  -->
+
+    <ListView
+        android:id="@+id/ContactsListView"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/addPhoneEditText">
+    </ListView>
+
+    </RelativeLayout>
+
+</ScrollView>
+    </RelativeLayout>
+
+
+
+
+

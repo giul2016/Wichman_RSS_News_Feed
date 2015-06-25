@@ -2,6 +2,10 @@
    This is the xml file with the larger rss icon for tablets
 
    -->
+
+
+
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -32,7 +36,7 @@
     <ListView
         android:id="@+id/myMainListView"
         android:layout_height="fill_parent"
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_gravity="bottom"
         style="@style/Base.TextAppearance.AppCompat.Display1"
         android:clickable="true"
@@ -45,18 +49,71 @@
 
     </ListView>
 
-        <ImageView
-            android:layout_width="match_parent"
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
-            android:src="@mipmap/ic_launcher" />
+            tools:context=".MainActivity"
+            tools:ignore="MergeRootFrame"
+            android:textAlignment="center"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/abc_action_bar_stacked_max_height"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Thomson Reuters is the world's largest international multimedia news agency, providing investing news, world news, business news, technology news, and headline news."
+            android:id="@+id/url1_textView" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="123dp"
+            android:paddingTop="@dimen/abc_action_button_min_width_overflow_material"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Sports News, Highlights And Coverage | Reuters.com"
+            android:id="@+id/url2_textView" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="373dp"
+                android:paddingTop="@dimen/abc_action_button_min_width_overflow_material"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="CNN News' mission is to create the finest possible news product and to present hard-breaking, national, and international news, as it unfolds."
+                android:id="@+id/url3_textView" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="117dp"
+                android:id="@+id/editText"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="156dp"
+                android:paddingTop="@dimen/abc_action_button_min_width_overflow_material"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Keep track of all of your Contact's Name and Phone nummbers here."
+                android:id="@+id/url4_textView" />
+
+
+      </LinearLayout>
 
     </LinearLayout>
 
 
-    <WebView
-        android:id="@+id/webView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"/>
+
+
+
+
+
+
 
 
 
